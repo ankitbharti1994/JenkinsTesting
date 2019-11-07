@@ -6,7 +6,7 @@ pipeline {
           sh 'xcodebuild -workspace JenkingsTesting/JenkingsTesting.xcworkspace -scheme "JenkingsTesting" -destination \'platform=iOS Simulator,name=iPhone 8\''
       }
     }
-    stage('Test') {
+    stage('Unit Test') {
       steps {
         sh 'xcodebuild test -workspace JenkingsTesting/JenkingsTesting.xcworkspace -scheme "JenkingsTestingTests" -destination \'platform=iOS Simulator,name=iPhone 8\''
       }
