@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-          sh 'xcodebuild -workspace JenkinsTesting.xcworkspace -scheme "JenkinsTesting" -destination \'platform=iOS Simulator,name=iPhone 8\''
+          sh 'xcodebuild -workspace JenkingsTesting/JenkingsTesting.xcworkspace -scheme "JenkingsTesting" -destination \'platform=iOS Simulator,name=iPhone 8\''
       }
     }
     stage('Test') {
